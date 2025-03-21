@@ -1,0 +1,41 @@
+chatRoom/
+├── backend/                    # Dossier pour le backend Node.js (API + WebSocket)
+│   ├── config/                 # Configuration (par exemple pour la base de données, ou les variables d'environnement)
+│   │   └── db.js               # Connexion à MongoDB
+│   ├── controllers/            # Logique des contrôleurs pour les routes
+│   │   ├── roomController.js   # Gestion des rooms (création, suppression)
+│   │   └── userController.js   # Gestion des utilisateurs (connexion, déconnexion)
+│   ├── models/                 # Modèles Mongoose pour MongoDB
+│   │   ├── Room.js             # Modèle pour les rooms
+│   │   └── User.js             # Modèle pour les utilisateurs
+│   ├── routes/                 # Définition des routes de l'API
+│   │   ├── roomRoutes.js       # Routes des rooms
+│   │   └── userRoutes.js       # Routes des utilisateurs
+│   ├── socket/                 # Gestion des WebSockets (Socket.io)
+│   │   └── socketHandler.js    # Gestion des messages en temps réel
+│   ├── server.js               # Fichier principal pour lancer le serveur Express
+│   ├── .env                    # Fichier de configuration de l'environnement (variables sensibles comme la clé de la base de données)
+│   └── package.json            # Dépendances et scripts backend
+│
+├── frontend/                   # Dossier pour le frontend React
+│   ├── public/                 # Dossier contenant les fichiers publics (index.html, etc.)
+│   │   └── index.html          # Fichier principal HTML
+│   ├── src/                    # Code source de l'application React
+│   │   ├── components/         # Composants React réutilisables
+│   │   │   ├── ChatRoom.js     # Composant pour une room de chat
+│   │   │   ├── Login.js        # Composant pour la page de login
+│   │   │   └── Message.js      # Composant pour afficher un message
+│   │   ├── pages/              # Pages principales
+│   │   │   ├── HomePage.js     # Page d'accueil avec la liste des rooms
+│   │   │   └── ChatPage.js     # Page du chat pour une room spécifique
+│   │   ├── services/           # Services pour interagir avec l'API du backend
+│   │   │   ├── roomService.js  # Service pour la gestion des rooms
+│   │   │   └── userService.js  # Service pour la gestion des utilisateurs
+│   │   ├── App.js              # Composant principal de l'application
+│   │   └── index.js            # Point d'entrée React
+│   ├── .env                    # Variables d'environnement frontend
+│   └── package.json            # Dépendances et scripts frontend
+│
+├── .gitignore                  # Fichier pour ignorer les fichiers non suivis par Git (node_modules, etc.)
+├── README.md                   # Documentation du projet
+└── package.json                # Fichier pour gérer les dépendances globales du projet (si besoin)

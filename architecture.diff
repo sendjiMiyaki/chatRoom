@@ -1,0 +1,19 @@
++---------------------+         +----------------------+
+|   Frontend (React)  |         |   Backend (Node.js)  |
+|---------------------|         |----------------------|
+|                     |         |                      |
+| - Page d'accueil    | <-----> | - API RESTful        |
+| - Liste des rooms   |         | - Gestion des rooms  |
+| - Interface de chat |         | - Gestion des users  |
+| - Interface login   |         | - Messages en temps  |
+|                     |         |    réel (Socket.io)  |
++---------------------+         +----------------------+
+            |                            |
+            v                            v
++---------------------+         +-----------------------------+
+|  Database (MongoDB) |         |     WebSocket Server        |
+|---------------------|         |-----------------------------|
+| - Rooms             | <-----> | - WebSocket (Socket.io)     |
+| - Users             |         | - Gestion des messages      |
+| - Messages          |         |    en temps réel            |
++---------------------+         +-----------------------------+
